@@ -76,7 +76,23 @@ ORDER BY ITscore ASC
 SELECT [dba],
        [zipcode]
 FROM restaurant_data
-WHERE ([zipcode] LIKE '11201' OR [zipcode] LIKE '10007' OR [zipcode] LIKE '10013')  
+WHERE ([zipcode] LIKE '11201' OR [zipcode] LIKE '10007' OR [zipcode] LIKE '10013')
+
+
+/* This query filters out restaurants that were recently closed down */
+SELECT vio.[camis], 
+       res.[camis],
+           [dba],
+           [boro],
+     [record_date],
+        [action],
+        [score]
+FROM violation_data vio
+LEFT JOIN restaurant_data res
+ON vio.camis = res.camis
+WHERE ([action] LIKE 'Establishment Closed by DOHMH. Violations were cited in the following area(s) and those requiring immediate action were addressed.')
+ORDER BY record_date DESC
+
 
 
 
