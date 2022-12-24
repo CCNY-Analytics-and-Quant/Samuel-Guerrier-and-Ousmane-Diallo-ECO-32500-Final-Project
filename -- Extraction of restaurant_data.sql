@@ -18,6 +18,6 @@ ORDER BY [inspection_date] DESC
 
 
 
-SELECT [boro]
+SELECT [camis]
 FROM restaurant_data
 
