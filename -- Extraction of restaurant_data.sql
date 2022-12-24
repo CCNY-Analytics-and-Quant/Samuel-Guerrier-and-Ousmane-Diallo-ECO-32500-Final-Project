@@ -16,3 +16,7 @@ FROM violation_data
 GROUP BY [inspection_date]
 ORDER BY [inspection_date] DESC 
 
+
+SELECT *
+FROM restaurant_data
+
