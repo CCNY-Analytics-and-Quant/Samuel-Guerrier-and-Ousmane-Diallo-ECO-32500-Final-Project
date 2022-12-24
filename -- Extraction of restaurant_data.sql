@@ -20,3 +20,6 @@ ORDER BY [inspection_date] DESC
 SELECT *
 FROM restaurant_data
 
+SELECT [dba]
+FROM restaurant_data
+
