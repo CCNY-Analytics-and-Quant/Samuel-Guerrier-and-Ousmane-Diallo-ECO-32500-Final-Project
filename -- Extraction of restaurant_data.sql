@@ -18,6 +18,6 @@ ORDER BY [inspection_date] DESC
 
 
 
-SELECT [dba]
+SELECT [boro]
 FROM restaurant_data
 
